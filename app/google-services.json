@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "597639045628",
+    "firebase_url": "https://falconyap-17185.firebaseio.com",
+    "project_id": "falconyap-17185",
+    "storage_bucket": "falconyap-17185.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597639045628:android:0e3ef1f222a8df9d",
+        "android_client_info": {
+          "package_name": "club.dev.app.falconyap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597639045628-lng61sj13m7nvvkc7ns2gapp2qjvcg2a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "club.dev.app.falconyap",
+            "certificate_hash": "35eb07461390e02445da1f29ca1c91f050140feb"
+          }
+        },
+        {
+          "client_id": "597639045628-8pt5veice5hddg66ad1chkg8vqnjbbi0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV5K4wivbObfAojV93AFs8rM94IHcCmZQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597639045628-8pt5veice5hddg66ad1chkg8vqnjbbi0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
