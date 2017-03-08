@@ -5,4 +5,5 @@
     <color name="WasColorPrimaryDark">#0477bd</color>
     <color name="colorAccent">#e91e24</color>
     <color name="grayColor">#c2c2c2</color>
+    <color name ="White">#ffffff</color>
 </resources>

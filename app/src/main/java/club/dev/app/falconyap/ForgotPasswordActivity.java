@@ -70,29 +70,29 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         });
 
         ////////////////////softkeys hiding////////////////////////
-        final View decorView = (ForgotPasswordActivity.this).getWindow().getDecorView();
-        decorView.setOnSystemUiVisibilityChangeListener (new View.OnSystemUiVisibilityChangeListener() {
-            @Override
-            public void onSystemUiVisibilityChange(int visibility) {
-                if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
-                    decorView.setSystemUiVisibility(
-                            View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-                }
-            }
-        });
+     //   final View decorView = (ForgotPasswordActivity.this).getWindow().getDecorView();
+     //   decorView.setOnSystemUiVisibilityChangeListener (new View.OnSystemUiVisibilityChangeListener() {
+       //     @Override
+      //      public void onSystemUiVisibilityChange(int visibility) {
+     //           if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
+      //              decorView.setSystemUiVisibility(
+      //                      View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+      //                              | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+        //                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        //        }
+       //     }
+      //  });
     }
     
-    @Override
-    public void onResume() {
-        super.onResume();
-
+    //@Override
+   // public void onResume() {
+    //    super.onResume();
+//
           /*hide soft keys */
 
-        final int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
-        final View decorView = getWindow().getDecorView();
-        decorView.setSystemUiVisibility(uiOptions);
+   //     final int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+   //     final View decorView = getWindow().getDecorView();
+    //    decorView.setSystemUiVisibility(uiOptions);
 
-    }
+   // }
 }

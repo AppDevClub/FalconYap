@@ -104,8 +104,22 @@ public class LoginActivity extends FragmentActivity {
         });
 
 
+
+
+
     }
 
+
+
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        decorView.setSystemUiVisibility(uiOptions);
+    }
 
     private void newAccount()  {
 
