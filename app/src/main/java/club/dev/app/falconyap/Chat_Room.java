@@ -112,8 +112,8 @@ public class Chat_Room extends AppCompatActivity {
 
         while (i.hasNext()){
 
-               chat_msg = (String) (nDatabase.getDatabase().getReference().child(("Users")).child("name")).toString();
-            chat_user_name = (String) ((DataSnapshot)i.next()).getValue();
+               chat_msg = (String) ((DataSnapshot)i.next()).getValue();
+            chat_user_name = (String) (nDatabase.getDatabase().getReference().child(("Users")).child("name")).toString();
 
 
 
