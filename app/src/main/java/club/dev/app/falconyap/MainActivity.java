@@ -80,11 +80,11 @@ public class MainActivity extends AppCompatActivity {  //FragmentActivity allows
             nAuth.addAuthStateListener(nAuthListener);   //helps to keep on main activity even after logging out and allows to be in login activity after logging out
 
 
-        add_room = (Button) findViewById(R.id.btn_add_room);
+       // add_room = (Button) findViewById(R.id.btn_add_room);
 
 
 
-        room_name = (EditText) findViewById(R.id.room_name_edittext);
+        //room_name = (EditText) findViewById(R.id.room_name_edittext);
         listView = (ListView) findViewById(R.id.listView);
 
 
@@ -95,16 +95,16 @@ public class MainActivity extends AppCompatActivity {  //FragmentActivity allows
 
         request_user_name();
 
-        add_room.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        //add_room.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+          //  public void onClick(View view) {
 
-                Map<String,Object> map = new HashMap<String, Object>();
-                map.put(room_name.getText().toString(),"");
-                root.updateChildren(map);
+          //      Map<String,Object> map = new HashMap<String, Object>();
+          //      map.put(room_name.getText().toString(),"");
+           //     root.updateChildren(map);
 
-            }
-        });
+          //  }
+      //  });
 
         root.addValueEventListener(new ValueEventListener() {
             @Override

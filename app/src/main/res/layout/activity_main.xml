@@ -10,38 +10,6 @@
     android:background="@drawable/background"
     tools:context="club.dev.app.falconyap.MainActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:id="@+id/room_name_edittext"
-
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/btn_add_room"
-        android:layout_toStartOf="@+id/btn_add_room"
-        android:layout_height="wrap_content"
-        android:textColorLink="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:textColorHighlight="@android:color/white"
-        android:textColor="@android:color/white" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add room"
-        android:id="@+id/btn_add_room"
-
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textColorLink="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:textColorHighlight="@android:color/white"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        android:textStyle="normal|bold"
-        android:background="@android:color/transparent" />
-
     <ListView
 
         android:layout_width="wrap_content"

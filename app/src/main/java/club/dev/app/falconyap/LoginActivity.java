@@ -136,7 +136,7 @@ public class LoginActivity extends FragmentActivity {
 
     private void checkLogin() {
 
-        String email = nLoginEmailField.getText().toString().trim();
+        String email = nLoginEmailField.getText().toString().trim() + "@apps.losrios.edu";
         String password = nLoginPasswordField.getText().toString().trim();
 
         if(!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {

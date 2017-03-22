@@ -30,10 +30,14 @@ public class Chat_Room extends AppCompatActivity {
     private DatabaseReference root ;
     private String temp_key;
 
+    private DatabaseReference nDatabase;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_room);
+
+        nDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
 
         btn_send_msg = (Button) findViewById(R.id.btn_send);
         input_msg = (EditText) findViewById(R.id.msg_input);
@@ -62,6 +66,7 @@ public class Chat_Room extends AppCompatActivity {
                 Map<String,Object> map2 = new HashMap<String, Object>();
                 map2.put("name",user_name);
                 map2.put("msg",input_msg.getText().toString());
+                input_msg.setText("");
 
                 message_root.updateChildren(map2);
             }
@@ -107,8 +112,10 @@ public class Chat_Room extends AppCompatActivity {
 
         while (i.hasNext()){
 
-               chat_msg = (String) ((DataSnapshot)i.next()).getValue();
+               chat_msg = (String) (nDatabase.getDatabase().getReference().child(("Users")).child("name")).toString();
             chat_user_name = (String) ((DataSnapshot)i.next()).getValue();
+
+
 
             chat_conversation.append(chat_user_name +" : "+chat_msg +" \n");
         }

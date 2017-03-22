@@ -56,6 +56,8 @@ public class RegisterActivity extends AppCompatActivity {
         nRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 startRegister();
 
             }
@@ -67,8 +69,10 @@ public class RegisterActivity extends AppCompatActivity {
         private void startRegister() {
 
             final String name = nNameField.getText().toString().trim();
-            String email = nEmailField.getText().toString().trim();
+            String email = nEmailField.getText().toString().trim() + "@apps.losrios.edu";
             String password = nPasswordField.getText().toString().trim();
+
+
 
             if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
 

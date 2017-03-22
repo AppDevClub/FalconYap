@@ -33,7 +33,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
         android:id="@+id/emailField"
-        android:hint="Email..."
+        android:hint="Student ID..."
         android:textColorHint="@color/colorPrimaryDark"
         android:textColorHighlight="@color/colorPrimaryDark"
         android:textSize="24sp" />

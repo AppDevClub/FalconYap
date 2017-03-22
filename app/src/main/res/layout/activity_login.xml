@@ -13,6 +13,47 @@
     tools:context="club.dev.app.falconyap.LoginActivity">
 
 
+
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/loginEmailField"
+        android:hint="Student ID...Ex: w1111111  "
+        android:textColorHighlight="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textCursorDrawable="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textColorLink="@android:color/white"
+        android:layout_marginTop="39dp"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/loginPasswordField"
+        android:hint="Password..."
+        android:textColorHint="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textCursorDrawable="@android:color/white"
+        android:textColor="@android:color/white"
+        android:textColorLink="@android:color/white"
+        android:layout_alignBottom="@+id/linearLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="100dp" />
+
     <Button
         android:text="Need a New Account"
         android:textSize="20sp"
@@ -34,9 +75,9 @@
         android:textColor="#fff"
         android:textAlignment="center"
 
-        android:layout_marginTop="47dp"
         android:background="@drawable/border2"
-        android:layout_below="@+id/loginBtn"
+        android:layout_marginBottom="150dp"
+        android:layout_above="@+id/NewAccountbtn"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -45,49 +86,13 @@
         android:textColor="@drawable/button_text_color"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:textSize="20sp"
         android:id="@+id/loginBtn"
         android:background="@drawable/border"
-        android:layout_below="@+id/loginPasswordField"
+        android:layout_marginBottom="15dp"
+        android:layout_above="@+id/forgotpswdLoginTv"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_marginTop="51dp"
-        android:id="@+id/loginPasswordField"
-        android:hint="Password..."
-        android:textColorHint="@android:color/white"
-        android:textColorHighlight="@android:color/white"
-        android:textCursorDrawable="@android:color/white"
-        android:textColor="@android:color/white"
-        android:textColorLink="@android:color/white"
-        android:layout_below="@+id/loginEmailField"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/loginEmailField"
-        android:hint="Email..."
-        android:textColorHighlight="@android:color/white"
-        android:textColorHint="@android:color/white"
-        android:textCursorDrawable="@android:color/white"
-        android:textColor="@android:color/white"
-        android:textColorLink="@android:color/white"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="35dp" />
 
 
 </RelativeLayout>
