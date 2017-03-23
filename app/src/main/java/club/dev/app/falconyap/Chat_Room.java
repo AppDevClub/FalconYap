@@ -37,34 +37,36 @@ public class Chat_Room extends AppCompatActivity {
 
    // private DatabaseReference nDatabase;
 
-    private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthListener;
-    private DatabaseReference mDatabaseUsers;
+   // private DatabaseReference nDatabase;
+
+   // private FirebaseAuth mAuth;
+   // private FirebaseAuth.AuthStateListener mAuthListener;
+    //private DatabaseReference mDatabaseUsers;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chat_room);
 
-      //  nDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
 
-        mAuth= FirebaseAuth.getInstance();
-        mDatabaseUsers= FirebaseDatabase.getInstance().getReference().child("Users");
-        mDatabaseUsers.keepSynced(true);
+       // nDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
+     //   mAuth= FirebaseAuth.getInstance();
+      //  mDatabaseUsers= FirebaseDatabase.getInstance().getReference().child("Users");
+      //  mDatabaseUsers.keepSynced(true);
 
-        mAuthListener=new FirebaseAuth.AuthStateListener(){
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+       // mAuthListener=new FirebaseAuth.AuthStateListener(){
+           // @Override
+            //public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
-                if(firebaseAuth.getCurrentUser()!=null){
+            //    if(firebaseAuth.getCurrentUser()!=null){
 
-                }else{
+             //   }else{
 
                     // Toast.makeText(getContext(),"current user null", Toast.LENGTH_SHORT).show();
-                }
+             //   }
 
-            }
-        };
+         //   }
+      //  };
 
 
         btn_send_msg = (Button) findViewById(R.id.btn_send);
@@ -141,29 +143,36 @@ public class Chat_Room extends AppCompatActivity {
         while (i.hasNext()){
 
             chat_msg = (String) ((DataSnapshot)i.next()).getValue();
-
+           // chat_user_name = "Yapper";
+            chat_user_name = "Yapper" + (String) ((DataSnapshot)i.next()).getValue();
           //  chat_user_name = (String) (nDatabase.getDatabase().getReference().child(("Users")).child("name")).toString();
 
 //uigyugyugyu
+           // final String name_val = chat_user_name;
+           // mDatabaseUsers.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+             //   @Override
+              //  public void onDataChange(DataSnapshot dataSnapshot) {
+              //      chat_user_name = (String) dataSnapshot.child("name").getValue();
 
-            mDatabaseUsers.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    chat_user_name = (String) dataSnapshot.child("name").getValue();
+              //  }
 
-                }
+             //   @Override
+              //  public void onCancelled(DatabaseError databaseError) {
 
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
+           //     }
+          //  });
 
-                }
-            });
+          //  DatabaseReference newPost = nDatabase.push();
+
+          //  newPost.child("title").setValue(name_val);
+
 
 
 
 
 
             chat_conversation.append(chat_user_name +" : "+chat_msg +" \n");
+           // chat_conversation.append( "+chat_msg +" );
         }
 
 
