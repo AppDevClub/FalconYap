@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {  //FragmentActivity allows
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+       // getMenuInflater().inflate(R.menu.main_menu, menu);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -166,12 +166,12 @@ public class MainActivity extends AppCompatActivity {  //FragmentActivity allows
 
 
 
-        if(item.getItemId() ==R.id.action_logout) {
+       // if(item.getItemId() ==R.id.action_logout) {
 
-            logout();
+        //    logout();
 
 
-        }
+       // }
         return super.onOptionsItemSelected(item);
     }
 

@@ -35,13 +35,11 @@ public class Chat_Room extends AppCompatActivity {
     private DatabaseReference root ;
     private String temp_key;
 
-   // private DatabaseReference nDatabase;
+    //private DatabaseReference nDatabase;
 
-   // private DatabaseReference nDatabase;
-
-   // private FirebaseAuth mAuth;
-   // private FirebaseAuth.AuthStateListener mAuthListener;
-    //private DatabaseReference mDatabaseUsers;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private DatabaseReference mDatabaseUsers;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,24 +47,24 @@ public class Chat_Room extends AppCompatActivity {
         setContentView(R.layout.chat_room);
 
 
-       // nDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
-     //   mAuth= FirebaseAuth.getInstance();
-      //  mDatabaseUsers= FirebaseDatabase.getInstance().getReference().child("Users");
-      //  mDatabaseUsers.keepSynced(true);
+        //nDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
+        mAuth= FirebaseAuth.getInstance();
+        mDatabaseUsers= FirebaseDatabase.getInstance().getReference().child("Users");
+        mDatabaseUsers.keepSynced(true);
 
-       // mAuthListener=new FirebaseAuth.AuthStateListener(){
-           // @Override
-            //public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+        mAuthListener=new FirebaseAuth.AuthStateListener(){
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
-            //    if(firebaseAuth.getCurrentUser()!=null){
+                if(firebaseAuth.getCurrentUser()!=null){
 
-             //   }else{
+                }else{
 
-                    // Toast.makeText(getContext(),"current user null", Toast.LENGTH_SHORT).show();
-             //   }
+                     //Toast.makeText(getContext(),"current user null", Toast.LENGTH_SHORT).show();
+                }
 
-         //   }
-      //  };
+            }
+        };
 
 
         btn_send_msg = (Button) findViewById(R.id.btn_send);
@@ -78,7 +76,7 @@ public class Chat_Room extends AppCompatActivity {
         chat_conversation.setTextColor(Color.WHITE);
         chat_conversation.setTextSize(getResources().getDimension(R.dimen.textsizeone));
 
-        user_name = getIntent().getExtras().get("user_name").toString();
+        //user_name = getIntent().getExtras().get("user_name").toString();
         room_name = getIntent().getExtras().get("room_name").toString();
         setTitle(" Room - "+room_name);
 
@@ -144,31 +142,26 @@ public class Chat_Room extends AppCompatActivity {
 
             chat_msg = (String) ((DataSnapshot)i.next()).getValue();
            // chat_user_name = "Yapper";
-            chat_user_name = "Yapper" + (String) ((DataSnapshot)i.next()).getValue();
-          //  chat_user_name = (String) (nDatabase.getDatabase().getReference().child(("Users")).child("name")).toString();
+            //chat_user_name = (String) ((DataSnapshot)i.next()).getValue();
+           // chat_user_name = (String) (mDatabaseUsers.getDatabase().getReference().child(("Users")).child("name")).toString();
 
-//uigyugyugyu
-           // final String name_val = chat_user_name;
-           // mDatabaseUsers.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
-             //   @Override
-              //  public void onDataChange(DataSnapshot dataSnapshot) {
-              //      chat_user_name = (String) dataSnapshot.child("name").getValue();
+            final String name_val = chat_user_name;
+            mDatabaseUsers.child(mAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    chat_user_name = (String) dataSnapshot.child("name").getValue();
 
-              //  }
+                }
 
-             //   @Override
-              //  public void onCancelled(DatabaseError databaseError) {
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
-           //     }
-          //  });
+                }
+            });
 
-          //  DatabaseReference newPost = nDatabase.push();
+            DatabaseReference newPost = mDatabaseUsers.push();
 
-          //  newPost.child("title").setValue(name_val);
-
-
-
-
+            newPost.child("name").setValue(name_val);
 
 
             chat_conversation.append(chat_user_name +" : "+chat_msg +" \n");
